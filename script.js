@@ -20,7 +20,7 @@ if (captcha_label) {
 document.write(captcha_html);
 
 window.addEventListener('message', function(e) {
-    if (e.origin.indexOf('dutch-dog.github.io') > -1) {
+    if (e.origin.indexOf('ddog.nl') > -1) {
         captcha_done = true;
         document.getElementById('doom_captcha').closest('form').action = 'https://getform.io/f/d00fb9d4-307e-4741-81df-5ac0447d7af6';
         document.getElementById('doom_captcha').style.borderColor = 'black';
