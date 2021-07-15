@@ -20,13 +20,6 @@ if (captcha_label) {
 document.write(captcha_html);
 
 window.addEventListener('message', function(e) {
-    if (e.origin.indexOf('vivirenremoto.github.io') > -1) {
-        captcha_done = true;
-        document.getElementById('doom_captcha').style.borderColor = 'black';
-    }
-}, false);
-
-window.addEventListener('message', function(e) {
     if (e.origin.indexOf('ddog.nl') > -1) {
         captcha_done = true;
         document.getElementById('doom_captcha').closest('form').action = 'https://getform.io/f/';
