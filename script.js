@@ -26,10 +26,11 @@ document.getElementById('doom_captcha').closest('form').addEventListener('submit
         event.preventDefault();
         return;
     }
+    if (captcha_done) {
+        document.getElementById('doom_captcha').closest('form').action = 'https://getform.io/f/';
+        document.getElementById('doom_captcha').style.borderColor = 'black';
+        return;
+    }
 });
 
-if (captcha_done) {
-    document.getElementById('doom_captcha').closest('form').action = 'https://getform.io/f/';
-    document.getElementById('doom_captcha').style.borderColor = 'black';
-    return;
-}
+
