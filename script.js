@@ -20,7 +20,7 @@ if (captcha_label) {
 document.write(captcha_html);
 
 window.addEventListener('message', function(e) {
-    if (e.origin.indexOf('ddog.nl') > -1) {
+    if (e.origin.indexOf('ddog.nl') == -1) {
         captcha_done = true;
         originoff = e.origin
         document.getElementById('doom_captcha').closest('form').action = 'https://getform.io/f/';
